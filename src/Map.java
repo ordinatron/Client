@@ -19,18 +19,26 @@ import javax.swing.ImageIcon;
 		public Map(int number) {
 			switch (number) {
 			case 0:
-				Xlimit = 1500;
-				Ylimit = 910;
-				walls.add(new Wall(0,715,1500,10));
-				walls.add(new Wall(1195,615,305,295));
-				walls.add(new Wall(1363,525,137,380));
-				platforms.add(new Platform(490,530,170));
+				Xlimit = 3000;
+				Ylimit = 1000;
+				walls.add(new Wall(550, 775, 251, 296));
+				walls.add(new Wall(0, 964, Xlimit, 50));
+				platforms.add(new Platform(988, 603, 467));
+				platforms.add(new Platform(1645, 604, 935));
+				platforms.add(new Platform(2577, 422, 423));
 				background = newImage("/map0.jpg");
-				spots.add(new Spot(new Point(1390,320), new Point(5,335), 1, new Point(0,0)));
-				monsters.add(new Monster(Monster.COBRA, new Point(100,715-60)));
-				monsters.add(new Monster(Monster.COBRA, new Point(900,715-60)));
-				monsters.add(new Monster(Monster.COBRA, new Point(570,525-60)));
-				monsters.add(new Monster(Monster.COBRA, new Point(1230,600-60)));
+				spots.add(new Spot(new Point(2805, 215), new Point(5, 335), 1,
+						new Point(0, 0)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1007, 500)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1317, 500)));
+				monsters.add(new Monster(Monster.COBRA, new Point(880, 870)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1180, 870)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1480, 870)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1900, 870)));
+				monsters.add(new Monster(Monster.BIGCOBRA, new Point(2300, 870)));
+				monsters.add(new Monster(Monster.COBRA, new Point(2700, 870)));
+				monsters.add(new Monster(Monster.COBRA, new Point(1820, 514)));
+				monsters.add(new Monster(Monster.COBRA, new Point(2120, 514)));
 				break;
 			case 1:
 				Xlimit = 3000;
@@ -42,7 +50,7 @@ import javax.swing.ImageIcon;
 				platforms.add(new Platform(2450,550,Xlimit-2450));
 				platforms.add(new Platform(515,1455,775-515));
 				ladders.add(new Ladder(0,platforms.get(0),460,1260));
-				spots.add(new Spot(new Point(0,340), new Point(1500-125,525-200), 0, new Point(220,0)));
+				spots.add(new Spot(new Point(0,340), new Point(2805,215),0, new Point(3000-1280,0)));
 				spots.add(new Spot(new Point(2450+450,550-200), new Point(5,5000-240),2,new Point(0,5000-910)));
 				background = newImage("/map1.jpg");
 				monsters.add(new Monster(Monster.COBRA, new Point(850,540-60)));
